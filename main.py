@@ -78,10 +78,11 @@ async def check_phone_matches_username(phone_to_test: str, username_to_check: st
 def write_database(input_object: object):
     with open(main_file_path + file_name, "w") as file:
         file.write(json.dumps(input_object, sort_keys=True))
+        
         return True
 
 # Read database json file
-def read_database():
+def read_database() -> list[str] | None:
     try:
         with open(main_file_path + file_name, "r") as file:
             return json.loads(file.read())
