@@ -5,16 +5,66 @@ import os
 load_dotenv()
 
 # Get config from .env file
-API_ID = os.getenv("API_ID") or 'your_api_id'       
+API_ID = os.getenv("API_ID") or "your_api_id"
 try:
     API_ID = int(API_ID)
 
 except ValueError:
-    print("Khata: Dar file config.py shoma API_ID sahih ra vared nakr did chon adad nist")
+    print(
+        "Khata: Dar file config.py shoma API_ID sahih ra vared nakr did chon adad nist"
+    )
     sys.exit(1)
 
-API_HASH = os.getenv("API_HASH") or 'your_api_hash'  
+API_HASH = os.getenv("API_HASH") or "your_api_hash"
 
-SESSION_NAME = os.getenv("API_HASH") or 'check_session'  
+SESSION_NAME = os.getenv("API_HASH") or "check_session"
 
 checked_username = "@Sobhan_SRZA"
+
+# پیش‌شماره‌های معتبر ایران با وزن‌های پیش‌فرض بر اساس توزیع جمعیتی
+prefixes = {
+    # همراه اول (بر اساس تقسیم‌بندی استانی)
+    "910": 12,  # کشوری
+    "911": 10,  # مازندران، گلستان، گیلان
+    "912": 15,  # تهران، البرز، قم، سمنان، زنجان، قزوین
+    "913": 10,  # اصفهان، یزد، کرمان، چهارمحال و بختیاری
+    "914": 10,  # آذربایجان شرقی، آذربایجان غربی، اردبیل
+    "915": 10,  # خراسان رضوی، شمالی، جنوبی، سیستان و بلوچستان
+    "916": 10,  # خوزستان، لرستان
+    "917": 10,  # فارس، بوشهر، هرمزگان، کهگیلویه و بویراحمد
+    "918": 10,  # کردستان، ایلام، مرکزی، کرمانشاه، همدان
+    "919": 12,  # اعتباری کشوری
+
+    # ایرانسل
+    "930": 12,
+    "933": 12,
+    "935": 15,
+    "936": 12,
+    "937": 12,
+    "938": 12,
+    "939": 12,
+    "901": 8,
+    "902": 8,
+    "903": 8,
+    "904": 5,
+    "905": 8,
+
+    # رایتل
+    "920": 10,
+    "921": 10,
+    "922": 12,
+
+    # همراه اول نسل جدید
+    "990": 8,
+    "991": 8,
+    "992": 8,
+    "993": 8,
+    "994": 5,
+    
+    # اپراتورهای مجازی
+    "931": 3,
+    "932": 3,
+    "934": 3,  # اسپادان، تالیا، کیش
+    "998": 2,
+    "999": 2,  # شاتل موبایل
+}
