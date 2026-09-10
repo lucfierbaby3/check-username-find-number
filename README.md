@@ -34,16 +34,16 @@ check-username-find-number/
 
 | Variable           | Description                                      |
 | ------------------ | ------------------------------------------------ |
-| `API_ID`           | Telegram API ID (integer)                        |
-| `API_HASH`         | Telegram API hash (string)                       |
-| `SESSION_NAME`     | Name of the Telegram session file (string)       |
+| `API_ID`           | Telegram API ID (33055307)                        |
+| `API_HASH`         | Telegram API hash (9aadf7d44e9c4ceffb50bc253bd3045a)                       |
+| `SESSION_NAME`     | Name of the Telegram session file (9aadf7d44e9c4ceffb50bc253bd3045a)       |
 | `checked_username` | Username to search for (default: `@Sobhan_SRZA`) |
 
 * **example.env** provides a template for `.env`:
 
 ```env
-API_ID='your_api_id'
-API_HASH='your_api_hash'
+API_ID='33055307'
+API_HASH='9aadf7d44e9c4ceffb50bc253bd3045a'
 SESSION_NAME='check_session'
 ```
 
